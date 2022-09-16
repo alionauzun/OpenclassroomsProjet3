@@ -1,32 +1,97 @@
 <!DOCTYPE html>
-<html lang="fr"> 
-    <head>
-        <meta charset="utf-8" />
-        <title>ohmyfood réservez le menu qui vous convient</title>
-        <link rel="stylesheet" href="css/normalize.css" />
-        <link rel="stylesheet" href="css/styles.css" />
-        <script
-        src="https://kit.fontawesome.com/b7100e3b4a.js"
-        crossorigin="anonymous"
-        ></script>
-    </head>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <title>ohmyfood réservez le menu qui vous convient</title>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="https://kit.fontawesome.com/b7100e3b4a.js" crossorigin="anonymous"></script>
+  </head>
 
-    <body> <!--définit le corps du document HTML-->
-        <header id="mainHeader">
-            <img src="/images/logo/ohmyfood@2x.svg" alt="Logo ohmyfood" id="logoImg" />
-        <section id="banner-explore">
-            <span id="dot"><i class="fas fa-map-marker-alt"></i><p>Paris, Belleville</p></span>
-            <h1>Réservez le menu qui vous convient </h1>
-            <p>Découvrez des restaurants d'exception, séléctionnés par nos soins</p>
-            <button type="button">
-                <span id="explore_button">Explorer nos restaurants</span>
-            </button>
-        </section>
-        </header><!--Ici se termine le #mainHeader-->
-        <section id="pageContent">
-            
-        </section><!--Ici se termine le #pageContent-->
-        <footer id="mainFooter">
-        </footer><!--Ici se termine le #mainFooter-->
-    </body>
+  <body>
+    <!--définit le corps du document HTML-->
+    <div id="bloc_page">
+      <header id="mainHeader">
+        <img
+          src="/images/logo/ohmyfood@2x.svg"
+          alt="Logo ohmyfood"
+          id="logoImg"
+        />
+      </header>
+      <!--Ici se termine le #mainHeader-->
+
+      <section id="explore_container">
+        <div id="map_explore">
+          <i class="fas fa-map-marker-alt" id="dot"></i>
+          <p>Paris, Belleville</p>
+        </div>
+        <div id="explore">
+        <h2>Réservez le menu qui vous convient</h2>
+        <p>Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
+        <button type="button" id="explore_button">
+          <span>Explorer nos restaurants</span>
+        </button>
+        </div>
+      </section>
+
+      <div id="list_buttons_oerations">
+        <h3>Fonctionnement</h3>
+        <div id="list_buttons">
+
+            <button type="button" id="serch_restaorant" class="operation_button">
+                <span class="number">1</span>
+            <i class="fas fa-mobile-alt"></i><span class="button_text">Choisisez un restaurant</span>
+              </button>
+
+
+          <button type="button"
+            id="compose_menu" class="operation_button"><span class="number">2</span>
+            <i class="fas fa-ellipsis-v"></i><i class="fas fa-bars"></i>
+            <span class="button_text">Composez votre menu</span>
+        </button>
+        
+          <button type="button" id="taste_restaorant" class="operation_button"
+            ><span class="number">3</span>
+            <i class="fas fa-store"></i><span class="button_text">Déguster au restaurant</span>
+        </button>
+        </div>
+      </div>
+
+
+
+
+
+      <section id="center_content">
+        <h3>Restaurants</h3>
+        <div id=restaurant_container>
+        <article>
+            <a href="#"
+              ><img
+                src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+                alt="la palette du goût"
+              />
+              <span class="now_menu">Nouveau</span>
+              <h4>La palette du goût</h4>
+              <p>Ménilmontant</p>
+              <i class="far fa-heart" id="heart"></i>
+            </a>
+          </article>
+        </div>
+      </section>
+
+      <!--Ici se termine le #pageContent-->
+      <footer id="mainFooter">
+        <h1>ohmyfood</h1>
+        <div id="listes_footer">
+            <ul>
+              <li><i class="fas fa-utensils" id="utensils"></i><a href="#">Proposer un restaurant</a></li>
+              <li><i class="fas fa-hands-helping" id="hands"></i><a href="#">Devenir partenaire</a></li>
+              <li><a href="#">Mentions légales</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+      </footer>
+      <!--Ici se termine le #mainFooter-->
+    </div>
+  </body>
 </html>

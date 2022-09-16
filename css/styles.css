@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@200;300;400;500&family=Shrikhand&display=swap');
+
+:root{
+    --amethyst: #9356dc;
+    --rose-pink: #FF79DA;
+    --middle-blue-green: #99e2d0;
+    --grey:#ececec;
+    --grey-light: #f9f9f9;
+    --black: #010101;
+    --white: #fbfbfb;
+}
+
+#bloc_page {
+    max-width: 428px;
+    margin: auto;
+}
+
+* {
+    font-family: "Roboto", Verdana, Tahoma, sans-serif;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none; 
+}
+
+li{
+    list-style: none;
+}
+ul{
+    padding: 0%;
+}
+
+h2{
+    font: 29px 'Roboto', 'Gill Sans', 'Trebuchet MS', sans-serif;
+    font-weight: 600;
+}
+
+
+#mainHeader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 80px;
+}
+
+#logoImg{
+    align-items: center;
+}
+
+#map_explore{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--grey);
+    box-shadow: inset 0em 2px 4px #00000029;
+    font-size: 20px;
+}
+
+#dot{
+    padding-right: 20px;
+}
+
+#explore{
+    background-color: var(--grey-light) ;
+    display: flex;
+    flex-direction: column;
+}
+#explore h2{
+    text-align: center;
+    margin: 45px;
+    margin-bottom: 15px;
+}
+
+#explore p{
+    font: 22px "roboto";
+    font-weight: 300;
+    text-align: center;
+    margin: 6px;
+}
+
+#explore_button{
+    width: 64%;
+    margin: auto;
+    background: linear-gradient(-6deg, #9356dc, #FF79DA);
+    color: var(--white); 
+    font-size: 20px;
+
+    padding: 19px;
+    border-radius: 35px;
+    border: none;
+    box-shadow: 0px 4px 12px #00000050;
+    cursor: pointer;
+    margin-top: 30px;
+    margin-bottom: 60px;
+}
+
+h3{
+    font-size: 28px;
+    margin-bottom: 30px;
+    margin-left: 25px;
+    margin-top: 60px;
+}
+#list_buttons_oerations{
+    margin-bottom: 50px;
+}
+#list_buttons{
+    display: flex;  
+    flex-direction: column; 
+}
+#list_buttons i{
+   color: #808080;
+}
+.fa-bars{
+    font-size: 18px;
+}
+.fa-ellipsis-v{
+    font-size: 16px;
+}
+
+.operation_button{
+    width: 85%;
+    margin: auto;
+    border: none;
+    background-color: #f2f2f2;
+    font-size: 20px;
+    margin-bottom: 30px;
+    padding: 30px;
+    border-radius: 30px;
+    position: relative;
+    box-shadow: 0px 1px 20px #00000030; 
+}
+
+.operation_button ::after{
+    background-color: #F3EDFE;
+}
+.button_text{
+    padding-left: 15px;
+}
+.number{
+    height: 33px;
+    width: 33px;
+    padding: 5px;
+    border-radius: 50%;
+    background-color: var(--amethyst);
+    color: var(--white);
+    position: absolute;
+    left: -10px;
+}
+
+#center_content{
+    background-color: var(--grey-light);
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 150px;
+}
+#restaurant_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#restaurant_container article{
+background-color: var(--white);
+  border-radius: 19px;
+  box-shadow: 1px 1px 30px #00000029;
+  width: 90%;
+  margin-bottom: 30px;
+  height: 290px;
+  margin: auto;
+  position:relative;
+}
+article img{
+    height:195px;
+    width: auto;
+    object-fit: cover;
+    width: 100%;
+    border-radius: 19px 19px 0px 0px;
+}
+.now_menu{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    background-color: var(--middle-blue-green);
+    color: #2d8669;
+    padding: 8px;
+    padding-right: 20px;
+    padding-left: 20px;
+    border-radius: 3px;
+    font-weight: 500;
+    font-size: 18px;
+}
+h4{
+    color: var(--black);
+    font-size: 23px;
+    margin-left: 17px;
+    margin-bottom: 0px;
+    margin-top: 15px;
+}
+
+article p{
+    color: var(--black);
+    font-size: 22px;
+    margin-left: 17px;
+    font-weight: 200;
+    margin-top: 5px;
+}
+
+#heart{
+    position: absolute;
+    right: 30px;
+    bottom: 35px;
+    font-size: 30px;
+    font-weight: 100;
+    color: #808080;
+}
+
+footer{
+    color: var(--white);
+    background-color: #343435;
+
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+    padding-bottom: 40px;
+}
+footer h1{
+    font: 22px "Shrikhand";
+    margin-left: 30px;
+    margin-bottom: 0px;
+}
+footer a{
+    color: var(--white);
+}
+footer ul{
+    margin-left: 30px;
+}
+footer li{
+    font-size: 19px;
+    padding-bottom: 10px;
+}
+
+#hands{
+    font-size: 13px;
+    padding-right: 10px;
+}
+#utensils{
+    font-size: 16px;
+    padding-right: 13px;
+}
