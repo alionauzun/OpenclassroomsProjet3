@@ -1,0 +1,22 @@
+//Import external libraries and Goggle fonts
+@import url("https://necolas.github.io/normalize.css/8.0.1/normalize.css");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@200;300;400;500&family=Shrikhand&display=swap');
+
+
+//import utils
+@import "utils/variables";
+@import "utils/mixins";
+@import "utils/functions";
+
+//import classes
+@import "classes/buttons";
+@import "classes/colors";
+@import "classes/font-sizes";
+
+//import modules
+@import "modules/main";
+@import "modules/mainHeader";
+@import "modules/mainFooter";
+@import "modules/home";
+@import "modules/menu";
+@import "modules/text";

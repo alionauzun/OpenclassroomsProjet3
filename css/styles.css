@@ -1,248 +1,381 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@200;300;400;500&family=Shrikhand&display=swap');
-
-:root{
-    --amethyst: #9356dc;
-    --rose-pink: #FF79DA;
-    --middle-blue-green: #99e2d0;
-    --grey:#ececec;
-    --grey-light: #f9f9f9;
-    --black: #010101;
-    --white: #fbfbfb;
-}
-
-#bloc_page {
-    margin: auto;
-}
-
-* {
-    font-family: "Roboto", Verdana, Tahoma, sans-serif;
-    box-sizing: border-box;
-}
-
-a{
-    text-decoration: none; 
-}
-
-li{
-    list-style: none;
-}
-ul{
-    padding: 0%;
-}
-
-#mainHeader{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    width: 100%;
-    height: 160px;
-}
-
-#logoImg{
-    align-items: center;
-    height: 75px
-}
-
-#map_explore{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    background-color: var(--grey);
-    box-shadow: inset 0em 5px 15px #00000029;
-    font-size: 42px;
-}
-
-#dot{
-    padding-right: 20px;
-}
-
-#explore{
-    background-color: var(--grey-light) ;
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 100px;
-}
-#explore h2{
-    font: 62px 'Roboto', 'Gill Sans', 'Trebuchet MS', sans-serif;
-    text-align: center;
-    margin: 125px;
-    margin-bottom: 15px;
-    font-weight: 600;
-}
-
-#explore p{
-    font: 48px "roboto";
-    font-weight: 300;
-    text-align: center;
-    margin: 30px;
-}
-
-#explore_button{
-    width: 60%;
-    margin: auto;
-    background: linear-gradient(-6deg, #9356dc, #FF79DA);
-    color: var(--white);
-    font-size: 42px;
-    padding: 40px;
-    border-radius: 60px;
-    border: none;
-    box-shadow: 0px 6px 30px #00000050;
-    cursor: pointer;
-    margin-top: 30px;
-    margin-bottom: 60px;
-}
-
-h3{
-    font-size: 60px;
-    margin-bottom: 70px;
-    margin-left: 57px;
-    margin-top: 120px;
-}
-#list_buttons_oerations{
-    margin-bottom: 50px;
-}
-#list_buttons{
-    display: flex;  
-    flex-direction: column; 
-}
-#list_buttons i{
-   color: #808080;
-}
-.fa-bars{
-    font-size: 18px;
-}
-.fa-ellipsis-v{
-    font-size: 16px;
-}
-
-.operation_button{
-    width: 85%;
-    margin: auto;
-    border: none;
-    background-color: #f2f2f2;
-    font-size: 42px;
-    margin-bottom: 60px;
-    padding: 65px;
-    border-radius: 65px;
-    position: relative;
-    box-shadow: 0px 1px 34px #00000040; 
-}
-
-.operation_button ::after{
-    background-color: #F3EDFE;
-}
-.button_text{
-    padding-left: 15px;
-}
-.number{
-    height: 33px;
-    width: 33px;
-    padding: 5px;
-    border-radius: 50%;
-    background-color: var(--amethyst);
-    color: var(--white);
-    position: absolute;
-    left: -10px;
-}
-
-#center_content{
-    background-color: var(--grey-light);
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 150px;
-}
-#restaurant_container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-#restaurant_container article{
-background-color: var(--white);
-  border-radius: 19px;
-  box-shadow: 1px 1px 30px #00000029;
-  width: 90%;
-  margin-bottom: 30px;
-  height: 290px;
+@import url("https://necolas.github.io/normalize.css/8.0.1/normalize.css");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@200;300;400;500&family=Shrikhand&display=swap");
+.btn, .center_container__menu .btn--comander, #mainHeader .explore button {
+  color: #ffffff;
   margin: auto;
-  position:relative;
-}
-article img{
-    height:195px;
-    width: auto;
-    object-fit: cover;
-    width: 100%;
-    border-radius: 19px 19px 0px 0px;
-}
-.now_menu{
-    position: absolute;
-    right: 20px;
-    top: 20px;
-    background-color: var(--middle-blue-green);
-    color: #2d8669;
-    padding: 8px;
-    padding-right: 20px;
-    padding-left: 20px;
-    border-radius: 3px;
-    font-weight: 500;
-    font-size: 18px;
-}
-h4{
-    color: var(--black);
-    font-size: 23px;
-    margin-left: 17px;
-    margin-bottom: 0px;
-    margin-top: 15px;
+  border: none;
+  font-size: 17px;
+  background: linear-gradient(-6deg, #9356dc, #FF79DA);
+  padding: 15px;
+  border-radius: 38px;
+  box-shadow: 0px 2px 5px grey;
+  cursor: pointer;
 }
 
-article p{
-    color: var(--black);
-    font-size: 22px;
-    margin-left: 17px;
-    font-weight: 200;
-    margin-top: 5px;
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  color: #010101;
+  background-color: #ffffff;
 }
 
-#heart{
-    position: absolute;
-    right: 30px;
-    bottom: 35px;
-    font-size: 30px;
-    font-weight: 100;
-    color: #808080;
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Roboto", "Shrikhand", sans-serif;
 }
 
-footer{
-    color: var(--white);
-    background-color: #343435;
+#center_container {
+  padding-top: 30px;
+  padding-bottom: 50px;
+  background-color: #f7f7f7;
+}
+#center_container h3 {
+  font-size: 23px;
+  margin: 25px 20px;
+}
+#center_container article {
+  background-color: var(--white);
+  border-radius: 15px;
+  box-shadow: 1px 1px 30px rgba(0, 0, 0, 0.1607843137);
+  width: 90%;
+  height: 255px;
+  margin: auto;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  position: relative;
+}
+#center_container article a {
+  text-decoration: none;
+  color: #010101;
+}
+#center_container article a img {
+  height: 175px;
+  width: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  border-radius: 15px 15px 0px 0px;
+}
+#center_container article a .now_menu {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  background-color: #99e2d0;
+  color: #2d8669;
+  padding: 6px 14px;
+  border-radius: 3px;
+  font-weight: 500;
+  font-size: 15px;
+}
+#center_container article a .btn--heart {
+  position: absolute;
+  border: none;
+  right: 25px;
+  bottom: 30px;
+  font-size: 25px;
+  color: #808080;
+  background: none;
+  cursor: pointer;
+  transform: font-weight(100);
+  transition: transform 400ms;
+}
+#center_container article a .btn--heart :hover {
+  transform: font-width(900px) linear-gradient(-6deg, #9356dc, #FF79DA);
+}
+#center_container article a h4 {
+  font-size: 18px;
+  margin: 10px 15px 0px;
+}
+#center_container article a p {
+  font-weight: 200;
+  font-size: 17px;
+  margin: 5px 15px 0px;
+}
 
-    display: flex;
-    flex-direction: column;
-    padding-top: 10px;
-    padding-bottom: 40px;
+#mainHeader {
+  width: 100%;
 }
-footer h1{
-    font: 22px "Shrikhand";
-    margin-left: 30px;
-    margin-bottom: 0px;
+#mainHeader .explore {
+  background-color: #f7f7f7;
+  padding-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-footer a{
-    color: var(--white);
+#mainHeader .explore #logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0px 12px;
+  width: 100%;
+  background: #ffffff;
 }
-footer ul{
-    margin-left: 30px;
+#mainHeader .explore #logo img {
+  height: 30px;
 }
-footer li{
-    font-size: 19px;
-    padding-bottom: 10px;
+#mainHeader .explore .explore--mapBar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  height: 52px;
+  background-color: #ebebeb;
+  width: 100%;
+  box-shadow: inset 0em 3px 5px rgba(0, 0, 0, 0.1607843137);
+}
+#mainHeader .explore .explore--mapBar .fas {
+  font-weight: 900;
+  padding-bottom: 5px;
+  color: #494949;
+}
+#mainHeader .explore .explore--mapBar p {
+  font-size: 16px;
+  font-weight: 500;
+  color: #353535;
+}
+#mainHeader .explore h2 {
+  text-align: center;
+  font-size: 24px;
+  padding: 20px 46px 0px;
+  margin-bottom: 0px;
+}
+#mainHeader .explore p {
+  color: #808080;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 200;
+  margin: 15px;
+}
+#mainHeader .explore button {
+  margin: 15px;
+}
+#mainHeader nav {
+  margin-top: 50px;
+  margin-bottom: 60px;
+}
+#mainHeader nav h3 {
+  font-size: 23px;
+  margin: 30px 20px;
+}
+#mainHeader nav ul {
+  padding: 0%;
+}
+#mainHeader nav ul :hover {
+  background-color: rgb(216, 193, 237);
+}
+#mainHeader nav ul li {
+  list-style-type: none;
+  font-size: 16px;
+  font-weight: 500;
+  margin: auto;
+  border: none;
+  border-radius: 20px;
+  background-color: #f7f7f7;
+  width: 70%;
+  margin-bottom: 25px;
+  padding: 25px;
+  position: relative;
+  box-shadow: 0px 3px 10px rgba(128, 128, 128, 0.368627451);
+}
+#mainHeader nav ul li a {
+  text-decoration: none;
+  color: #010101;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+#mainHeader nav ul li a :hover {
+  background-color: #FF79DA;
+  color: #9356dc;
+}
+#mainHeader nav ul li a .fas {
+  color: #808080;
+}
+#mainHeader nav ul li a .fa-store {
+  margin: 0px 22px 0px 12px;
+}
+#mainHeader nav ul li a .fa-mobile-alt {
+  font-size: 20px;
+  margin: 0px 25px 0px 14px;
+}
+#mainHeader nav ul li a .menu-ellipsisBars {
+  display: flex;
+  align-items: center;
+  margin: 0px 20px 0px 10px;
+  color: gray;
+}
+#mainHeader nav ul li a .menu-ellipsisBars .fa-ellipsis-v {
+  font-size: 15px;
+}
+#mainHeader nav ul li a .menu-ellipsisBars .fa-bars {
+  font-size: 17px;
+  padding-left: 2px;
+}
+#mainHeader nav ul li a .number {
+  height: 15px;
+  width: 15px;
+  font-size: 15px;
+  padding: 5px;
+  border-radius: 50%;
+  background-color: #9356dc;
+  color: #ffffff;
+  position: absolute;
+  left: -40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-#hands{
-    font-size: 13px;
-    padding-right: 10px;
+#mainFooter {
+  padding: 10px 25px 40px;
+  color: #ffffff;
+  background-color: #353535;
 }
-#utensils{
-    font-size: 16px;
-    padding-right: 13px;
+#mainFooter h3 {
+  font: 19px "Shrikhand";
 }
+#mainFooter ul {
+  padding: 0%;
+}
+#mainFooter ul li {
+  list-style-type: none;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+#mainFooter ul li #hands {
+  font-size: 11px;
+  padding-right: 10px;
+}
+#mainFooter ul li #utensils {
+  font-size: 14px;
+  padding-right: 13px;
+}
+#mainFooter ul li a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+#main_wrapper__menu {
+  width: 100%;
+  margin: auto;
+  /*#test::before{
+      font-family: "Font Awesome 5 Free";
+      content: "\f004";*/
+}
+#main_wrapper__menu #logo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px 0px 12px;
+  width: 100%;
+}
+#main_wrapper__menu #logo img {
+  height: 30px;
+}
+#main_wrapper__menu #logo i {
+  color: #353535;
+  font-size: 22px;
+  padding: 0px 60px 0px 30px;
+}
+#main_wrapper__menu .mainHeader__imag {
+  height: 260px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: relative;
+}
+
+.center_container__menu {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  background-color: #f7f7f7;
+  top: 280px;
+  width: 100%;
+  border-radius: 40px 40px 0px 0px;
+}
+.center_container__menu .center_container__header {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 30px 0px 20px;
+}
+.center_container__menu .center_container__header h1 {
+  font: 28px "Shrikhand";
+}
+.center_container__menu .center_container__header .btn--heart {
+  border: none;
+  background: none;
+  font-size: 25px;
+  cursor: pointer;
+  transform: font-weight(100);
+  transition: transform 400ms;
+}
+.center_container__menu .center_container__header .btn--heart :hover {
+  transform: font-width(900px) linear-gradient(-6deg, #9356dc, #FF79DA);
+}
+.center_container__menu section {
+  display: flex;
+  flex-direction: column;
+  margin: 0 15px;
+  padding-bottom: 20px;
+}
+.center_container__menu h2 {
+  font: 16px roboto;
+  font-weight: 200;
+  margin: 15px 0px 5px;
+}
+.center_container__menu input {
+  display: none;
+}
+.center_container__menu label {
+  display: flex;
+  position: relative;
+  background-color: #ffffff;
+  border-radius: 15px;
+  height: 75px;
+  width: 100%;
+  margin-bottom: 17px;
+  cursor: pointer;
+  box-shadow: 0px 3px 10px rgba(128, 128, 128, 0.368627451);
+}
+.center_container__menu label .label__leftBloc {
+  width: 82%;
+  display: flex;
+  flex-direction: column;
+}
+.center_container__menu label .label__leftBloc h4 {
+  margin: 15px 14px 2px;
+  font-size: 18px;
+}
+.center_container__menu label .label__leftBloc p {
+  margin: 5px 14px;
+  font: 15px roboto;
+  font-weight: 200;
+  display: flex;
+  display: flex;
+  justify-content: space-between;
+}
+.center_container__menu label .label__leftBloc p span {
+  font-weight: 500;
+}
+.center_container__menu label .label__rightBloc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 18%;
+  background-color: #99e2d0;
+  border-radius: 0px 15px 15px 0px;
+}
+.center_container__menu label .label__rightBloc i {
+  background-color: #ffffff;
+  padding: 6px;
+  border-radius: 50%;
+  font-size: 13px;
+  color: #99e2d0;
+}
+.center_container__menu .btn--comander {
+  width: 65%;
+  margin: 20px 60px 86px;
+}/*# sourceMappingURL=styles.css.map */
