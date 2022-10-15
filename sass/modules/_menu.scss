@@ -38,38 +38,69 @@
         border-radius: 40px 40px 0px 0px;
         .center_container__header{
             display: flex;
+            align-items: center;
             justify-content: space-between;
-            margin: 15px 30px 0px 20px;
+            margin: 15px 30px 25px 20px;
             h1{
                 font: 28px "Shrikhand";
             }
-            .btn--heart{
+            .btn--heart .far{
+                font-weight: 100;
                 border: none;
                 background: none;
                 font-size: 25px;
                 cursor: pointer;
-                transform: font-weight(100) color(#808080);
-                transition: transform 400ms;            
-                & :hover {
-                    transform: font-width(900px) color("color-buttons");
-            
+                transition: 1s ease;
             }
+            
+            input[type=checkbox]{
+                display: none;
+            &:checked + label .far{
+                font-weight: 900;
+                color: transparent;
+                background-clip: text;
+                background-image: linear-gradient(-6deg, #9356dc, #FF79DA);
             }
         }
-            section {
-            display: flex;
+    }
+        section {
+            display: inline-block;
             flex-direction: column;
             margin: 0 15px;
             padding-bottom: 20px;
-        }
 
+            opacity: 0;
+            transform: translateY(-30px);
+            &:nth-child(1){
+                animation: slide-top 0.8s 0.2s ease-out forwards;
+            }
+            &:nth-child(2){
+                animation: slide-top 0.8s 0.4s ease-out forwards;
+            }
+            
+            &:nth-child(3){
+                animation: slide-top 0.8s 0.6s ease-out forwards;
+            }
+            &:nth-child(4){
+                animation: slide-top 0.8s 0.8s ease-out forwards;
+            }
         h2{
-            font: 16px roboto;
+            font: 17px roboto;
             font-weight: 200;
             margin: 15px 0px 5px;
         }
-        input{
+        hr{
+            width: 12%;
+            margin: 0 0 15px;
+            background-color: #99e2d0;
+            height: 3px;
+            border: none;
+        }
+        input[type=checkbox]{
             display: none;
+            &:checked + label .label__rightBloc{
+                width: 24%;
+            }
         }
         label {
             display: flex;
@@ -82,35 +113,39 @@
             cursor: pointer;
             box-shadow: 0px 3px 10px #8080805e;
             .label__leftBloc {
-                width: 82%;
-                display: flex;
-                flex-direction: column;
+                width: 100%;
+                padding: 15px 14px 10px;
             
-            h4{
-                margin: 15px 14px 2px;
-                font-size: 18px;
-            }
-            p{
-                margin: 5px 14px;
-                font: 15px roboto;
-                font-weight: 200;
-
-                display: flex;
-                display: flex;
-                justify-content: space-between;
-                span{
-                font-weight: 500;
-            }
+                h4{
+                    margin: 0;
+                    font-size: 18px;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+                p{
+                    margin: 0;
+                    margin-top: 5px;
+                    font: 16px roboto;
+                    font-weight: 200;
+                    justify-content: space-between;
+                    span{
+                        font-weight: 500;
+                        float: right;
+                    }
+                }
             }
             
-        }
-        .label__rightBloc{
+            .label__rightBloc{
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 18%;
+            width: 0;
             background-color: color("middle-blue-green");
+            
             border-radius: 0px 15px 15px 0px;
+            overflow: hidden;
+            transition: width 0.4s ease;
             i{
                 background-color: color("white");
                 padding: 6px;
@@ -118,14 +153,21 @@
                 font-size: 13px;  
                 color: color("middle-blue-green")
             }
+            }
         }
-          }
+    }
 
         .btn--comander{
             @extend .btn;
             width: 65%;
-            margin: 20px 60px 86px;
-
+            margin-bottom:  60px;
             }
     }
+
+
+@keyframes slide-top{
+100%{
+    opacity: 1;
+}
+}
 

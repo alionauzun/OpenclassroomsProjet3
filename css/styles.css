@@ -66,21 +66,6 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 500;
   font-size: 15px;
 }
-#center_container article a .btn--heart {
-  position: absolute;
-  border: none;
-  right: 25px;
-  bottom: 30px;
-  font-size: 25px;
-  color: #808080;
-  background: none;
-  cursor: pointer;
-  transform: font-weight(100);
-  transition: transform 400ms;
-}
-#center_container article a .btn--heart :hover {
-  transform: font-width(900px) linear-gradient(-6deg, #9356dc, #FF79DA);
-}
 #center_container article a h4 {
   font-size: 18px;
   margin: 10px 15px 0px;
@@ -89,6 +74,34 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 200;
   font-size: 17px;
   margin: 5px 15px 0px;
+}
+#center_container article input[type=checkbox] {
+  display: none;
+}
+#center_container article input[type=checkbox]:checked + label i {
+  font-weight: 900;
+  color: pink;
+}
+#center_container article .btn--heart .far {
+  position: absolute;
+  border: none;
+  right: 25px;
+  bottom: 30px;
+  font-size: 25px;
+  color: #808080;
+  background: none;
+  cursor: pointer;
+  transition: 1s ease;
+}
+#center_container article input[type=checkbox] {
+  display: none;
+}
+#center_container article input[type=checkbox]:checked + label .far {
+  font-weight: 900;
+  color: transparent;
+  -webkit-background-clip: text;
+          background-clip: text;
+  background-image: linear-gradient(-6deg, #9356dc, #FF79DA);
 }
 
 #mainHeader {
@@ -161,7 +174,11 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0%;
 }
 #mainHeader nav ul :hover {
-  background-color: rgb(216, 193, 237);
+  background-color: #f3eafc;
+  cursor: pointer;
+}
+#mainHeader nav ul :hover i {
+  color: #9356dc;
 }
 #mainHeader nav ul li {
   list-style-type: none;
@@ -185,11 +202,7 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   justify-content: flex-start;
 }
-#mainHeader nav ul li a :hover {
-  background-color: #FF79DA;
-  color: #9356dc;
-}
-#mainHeader nav ul li a .fas {
+#mainHeader nav ul li a i {
   color: #808080;
 }
 #mainHeader nav ul li a .fa-store {
@@ -298,38 +311,74 @@ h1, h2, h3, h4, h5, h6 {
 }
 .center_container__menu .center_container__header {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  margin: 15px 30px 0px 20px;
+  margin: 15px 30px 25px 20px;
 }
 .center_container__menu .center_container__header h1 {
   font: 28px "Shrikhand";
 }
-.center_container__menu .center_container__header .btn--heart {
+.center_container__menu .center_container__header .btn--heart .far {
+  font-weight: 100;
   border: none;
   background: none;
   font-size: 25px;
   cursor: pointer;
-  transform: font-weight(100);
-  transition: transform 400ms;
+  transition: 1s ease;
 }
-.center_container__menu .center_container__header .btn--heart :hover {
-  transform: font-width(900px) linear-gradient(-6deg, #9356dc, #FF79DA);
+.center_container__menu .center_container__header input[type=checkbox] {
+  display: none;
+}
+.center_container__menu .center_container__header input[type=checkbox]:checked + label .far {
+  font-weight: 900;
+  color: transparent;
+  -webkit-background-clip: text;
+          background-clip: text;
+  background-image: linear-gradient(-6deg, #9356dc, #FF79DA);
 }
 .center_container__menu section {
-  display: flex;
+  display: inline-block;
   flex-direction: column;
   margin: 0 15px;
   padding-bottom: 20px;
+  opacity: 0;
+  transform: translateY(-30px);
 }
-.center_container__menu h2 {
-  font: 16px roboto;
+.center_container__menu section:nth-child(1) {
+  -webkit-animation: slide-top 0.8s 0.2s ease-out forwards;
+          animation: slide-top 0.8s 0.2s ease-out forwards;
+}
+.center_container__menu section:nth-child(2) {
+  -webkit-animation: slide-top 0.8s 0.4s ease-out forwards;
+          animation: slide-top 0.8s 0.4s ease-out forwards;
+}
+.center_container__menu section:nth-child(3) {
+  -webkit-animation: slide-top 0.8s 0.6s ease-out forwards;
+          animation: slide-top 0.8s 0.6s ease-out forwards;
+}
+.center_container__menu section:nth-child(4) {
+  -webkit-animation: slide-top 0.8s 0.8s ease-out forwards;
+          animation: slide-top 0.8s 0.8s ease-out forwards;
+}
+.center_container__menu section h2 {
+  font: 17px roboto;
   font-weight: 200;
   margin: 15px 0px 5px;
 }
-.center_container__menu input {
+.center_container__menu section hr {
+  width: 12%;
+  margin: 0 0 15px;
+  background-color: #99e2d0;
+  height: 3px;
+  border: none;
+}
+.center_container__menu section input[type=checkbox] {
   display: none;
 }
-.center_container__menu label {
+.center_container__menu section input[type=checkbox]:checked + label .label__rightBloc {
+  width: 24%;
+}
+.center_container__menu section label {
   display: flex;
   position: relative;
   background-color: #ffffff;
@@ -340,35 +389,39 @@ h1, h2, h3, h4, h5, h6 {
   cursor: pointer;
   box-shadow: 0px 3px 10px rgba(128, 128, 128, 0.368627451);
 }
-.center_container__menu label .label__leftBloc {
-  width: 82%;
-  display: flex;
-  flex-direction: column;
+.center_container__menu section label .label__leftBloc {
+  width: 100%;
+  padding: 15px 14px 10px;
 }
-.center_container__menu label .label__leftBloc h4 {
-  margin: 15px 14px 2px;
+.center_container__menu section label .label__leftBloc h4 {
+  margin: 0;
   font-size: 18px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-.center_container__menu label .label__leftBloc p {
-  margin: 5px 14px;
-  font: 15px roboto;
+.center_container__menu section label .label__leftBloc p {
+  margin: 0;
+  margin-top: 5px;
+  font: 16px roboto;
   font-weight: 200;
-  display: flex;
-  display: flex;
   justify-content: space-between;
 }
-.center_container__menu label .label__leftBloc p span {
+.center_container__menu section label .label__leftBloc p span {
   font-weight: 500;
+  float: right;
 }
-.center_container__menu label .label__rightBloc {
+.center_container__menu section label .label__rightBloc {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 18%;
+  width: 0;
   background-color: #99e2d0;
   border-radius: 0px 15px 15px 0px;
+  overflow: hidden;
+  transition: width 0.4s ease;
 }
-.center_container__menu label .label__rightBloc i {
+.center_container__menu section label .label__rightBloc i {
   background-color: #ffffff;
   padding: 6px;
   border-radius: 50%;
@@ -377,5 +430,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 .center_container__menu .btn--comander {
   width: 65%;
-  margin: 20px 60px 86px;
+  margin-bottom: 60px;
+}
+
+@-webkit-keyframes slide-top {
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-top {
+  100% {
+    opacity: 1;
+  }
 }/*# sourceMappingURL=styles.css.map */
