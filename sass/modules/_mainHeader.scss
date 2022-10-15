@@ -79,6 +79,9 @@
             }
             .fas{
                 color: color("gray");
+                & :hover{
+                    color: color("amethyst");
+                }
             }
             .fa-store{
                 margin: 0px 22px 0px 12px;
