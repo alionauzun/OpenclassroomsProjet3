@@ -1,0 +1,21 @@
+{
+  "name": "omyfood",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass" :"sass --watch sass/styles.scss: css/styles.css --style compressed",
+    "prefix": "postcss css/styles.css --use autoprefixer -d css/prefixed/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alionauzun/OpenclassroomsProjet3.git"
+  },
+  "author": "aliona",
+  "license": "ISC",
+  "browserslist": "last 4 versions",
+  "bugs": {
+    "url": "https://github.com/alionauzun/OpenclassroomsProjet3/issues"
+  },
+  "homepage": "https://github.com/alionauzun/OpenclassroomsProjet3#readme"
+}
