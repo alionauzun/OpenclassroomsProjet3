@@ -1,0 +1,104 @@
+#mainHeader {
+    width: 100%;
+    .explore{
+        background-color: color("gray-light");
+        padding-bottom: 40px;
+        @include display-flex();
+        #logo{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 0px 12px;
+            width: 100%;
+            background: color("white");
+            img{
+                height: 30px;
+            }
+        }
+        .explore--mapBar {
+        @include display-flex;
+        flex-direction: row;
+        justify-content: center;
+        height: 52px;
+        background-color: #ebebeb;
+        width: 100%;
+        box-shadow: inset 0em 3px 5px #00000029;
+        .fas {
+            font-weight: 900;
+            padding-bottom: 5px; 
+            color: #494949;       
+        }
+        p{
+            font-size: 16px;
+            font-weight: 500;
+            color: color("footer-background");
+        }
+    }    
+    h2{
+        text-align: center;
+        font-size: 24px;
+        padding: 20px 46px 0px;
+        margin-bottom: 0px;
+    }
+    p{
+    color: color("gray");
+    text-align: center;
+    font-size: 18px;
+    font-weight: 200;
+    margin: 15px;
+    }
+        
+    }
+    nav{
+        margin-top: 50px;
+        margin-bottom: 60px;
+        h3{
+        font-size: 23px;
+        margin: 30px 20px; 
+        }
+    ul{
+    padding: 0%;
+    flex-wrap: wrap;
+ 
+        }
+    }
+
+    @include media-breakpoint-up("md"){
+        
+        nav{
+            padding: 0px 50px;
+            #mainNav--li{
+                display: flex;
+                justify-content: space-evenly;
+                li{
+                    width: 320px;
+                    padding: 22px; 
+                    margin: 0px 10px 30px;
+                    a{
+                        font-size: font-size('md');
+                        justify-content: center;
+                        .fa-mobile-alt{
+                            font-size: 17px;
+                        }
+                        .menu-ellipsisBars{
+                            color: gray;
+                            .fa-ellipsis-v{
+                                font-size: 13px;
+                            }
+                            .fa-bars{
+                                font-size: 15px;
+                            }
+                        }
+                        .number{
+                            height: 18px;
+                            width: 18px;
+                            font-size: 16px;
+                            padding: 6px;
+                            left: -30px;
+                            }
+                        }
+                }
+            }
+        }
+    }
+}       

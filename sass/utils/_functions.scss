@@ -1,3 +1,18 @@
 @function color($color: "black"){
     @return map-get($colors, $color);
 }
+
+@function breakpoint-previous($name){
+    $names: map-keys($breakpoints);
+    $length: length($names);
+    $n: index($names, $name);
+    @if not $n {
+        @error "breakpoint `#{$name}` not found in `#{$names}`";
+    }
+    @if $n != 1 and $n <= $length {
+        @return nth($names, $n - 1);
+    }
+    @else {
+        @return $name; 
+    }
+};

@@ -10,13 +10,14 @@
 
 //import classes
 @import "classes/buttons";
-@import "classes/colors";
+@import "classes/animations";
 @import "classes/font-sizes";
 
+//import layouts
+@import "layouts/mainFooter";
+
 //import modules
-@import "modules/main";
-@import "modules/mainHeader";
-@import "modules/mainFooter";
+@import "modules/homeHeader";
 @import "modules/home";
 @import "modules/menu";
 @import "modules/text";

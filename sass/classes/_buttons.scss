@@ -1,12 +1,137 @@
-.btn{
-    color: color("white");
+.btn {
     margin: auto;
     border: none;
+    color: color("white");
     font-size: 17px;
     background: color("color-buttons");
     padding: 15px;
     border-radius: 38px;
-    box-shadow: 0px 2px 5px grey;
+    box-shadow: $default-box-shadow;
+    transition: 0.5s;
+    opacity: 1;
+    cursor: pointer;
+
+    &:hover{   
+        /*background-color: scale-color($value, $alpha: -20%);
+
+        box-shadow: scale-color($default-box-shadow, $alpha: +80%);*/
+        opacity: 0.8;
+        background: alpha(opacity=0.8);
+
+    }
+}
+
+
+.btn--explore{
+    @extend .btn;
+    margin: 15px;
+}
+
+.btn--comander{
+    @extend .btn;
+    padding: 15px 55px;
+    margin-bottom:  60px;
+    
+    }
+.btn--heart .far{
+    color: #808080; 
+    border: none;
+    background: none;
+    font-size: 25px;
     cursor: pointer;
 }
 
+.btn--heart .far--home{
+    position: absolute;
+    right: 25px;
+    bottom: 30px;
+} 
+
+input[type=checkbox]{
+    display: none;
+&:checked + label .far{
+    font-weight: 900;
+    color: transparent;
+    background-clip: text;
+    background-image: linear-gradient(-6deg, #9356dc, #FF79DA);
+    transition: all 1.5s ease-out;
+}
+}
+
+.btn--Navli{
+        list-style-type: none;
+        font-size: 16px;
+        font-weight: 500;
+        margin: auto;
+        border: none;
+        border-radius: 20px;
+        background-color: color("gray-light");
+        width: 70%;
+        margin-bottom: 25px;
+        padding: 25px;
+        position: relative;
+        box-shadow: 0px 3px 10px #8080805e;
+        &:hover {
+            background-color: #f3eafc;
+            cursor: pointer;
+        }
+        &:hover i{
+            color: color("amethyst"); 
+            } 
+        a{
+            text-decoration: none;
+            color: color("black");
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            i{
+                color: color("gray");
+            }
+            .fa-store{
+                margin: 0px 22px 0px 12px;
+            }
+            .fa-mobile-alt{
+                font-size: 20px;
+                margin: 0px 25px 0px 14px;
+            }
+            .menu-ellipsisBars{
+                display: flex;
+                align-items: center;
+                margin: 0px 20px 0px 10px;
+                color: gray;
+                .fa-ellipsis-v{
+                    font-size: 15px;
+                }
+                .fa-bars{
+                    font-size: 17px;padding-left: 2px;
+                }
+            
+            }
+            .number{
+                height: 15px;
+                width: 15px;
+                font-size: 15px;
+                padding: 5px;
+                border-radius: 50%;
+                background-color: color("amethyst");
+                color: color("white");
+                position: absolute;
+                left: -40px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                }
+            }
+        } 
+
+
+@include media-breakpoint-up("md"){
+    input:hover + label .far{
+        font-weight: 900;
+        color: transparent;
+        background-clip: text;
+        background-image: linear-gradient(-6deg, #9356dc, #FF79DA);
+        transition: all 0.5s ease-out;
+    }
+}
