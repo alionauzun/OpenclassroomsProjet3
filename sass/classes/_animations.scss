@@ -1,24 +1,23 @@
 //animation loading spinner
 .lds-default-content{
     position: fixed;
-    display: grid;
-    place-items: center;
+    @include display-grid();
     background-color: color("gray-light");
     height: 100vh;
     border-radius: 20px;
     inset:0;
     z-index: 1;
     opacity: 0.95;
-    animation: disappear 1s 2s linear forwards;
+    animation: disappear 0.5s 2s linear forwards;
     transform-origin: top;
 }
 
 @keyframes disappear{
     from{
-        transform: scaleY(1);
+        transform: scale(1);
     }
     to{
-        transform: scaleY(0);
+        transform: scale(0);
     }
 }
 
@@ -28,7 +27,7 @@
     border-radius: 50%;
     width: 200px;
     height: 200px;
-    color: #FF79DA;
+    color: color("secondary");
   }
     .loader:before,
     .loader:after {
@@ -44,7 +43,7 @@
       animation: 1s spin linear infinite;
     }
     .loader:after {
-      color: color("amethyst");
+      color: color("primary");
       transform: rotateY(70deg);
       animation-delay: .4s;
     }
@@ -97,22 +96,15 @@
 
 
 //animation page menu
-#main_wrapper__menu section {
-  transform: translateY(-30px);
-  &:nth-child(1) {
-    animation: menu-slide 0.8s 0.2s ease-out forwards;
+.menu-lst div{
+  @for $i from 1 through 4 {
+    &:nth-child(#{$i}) {
+      animation-delay: 200ms * $i;
   }
-  &:nth-child(2) {
-    animation: menu-slide 0.8s 0.4s ease-out forwards;
-  }
-
-  &:nth-child(3) {
-    animation: menu-slide 0.8s 0.6s ease-out forwards;
-  }
-  &:nth-child(4) {
-    animation: menu-slide 0.8s 0.8s ease-out forwards;
-  }
-
+}
+  animation: menu-slide 1s;
+  animation-fill-mode: both;
+  
   @keyframes menu-slide {
     from {
       transform: scale(0);

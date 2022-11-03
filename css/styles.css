@@ -3,22 +3,18 @@
 .btn, .btn--comander, .btn--explore {
   margin: auto;
   border: none;
-  color: #ffffff;
   font-size: 17px;
+  box-shadow: 0px 3px 10px rgba(53, 53, 53, 0.25);
+  color: #ffffff;
   background: linear-gradient(-6deg, #9356dc, #FF79DA);
   padding: 15px;
   border-radius: 38px;
-  box-shadow: 0px 3px 10px rgba(53, 53, 53, 0.5);
   transition: 0.5s;
-  opacity: 1;
   cursor: pointer;
 }
 .btn:hover, .btn--comander:hover, .btn--explore:hover {
-  /*background-color: scale-color($value, $alpha: -20%);
-
-  box-shadow: scale-color($default-box-shadow, $alpha: +80%);*/
-  opacity: 0.8;
-  background: alpha(opacity=0.8);
+  background: linear-gradient(-6deg, rgba(147, 87, 220, 0.9215686275), rgba(255, 121, 217, 0.9058823529));
+  box-shadow: 0px 3px 10px rgba(53, 53, 53, 0.6);
 }
 
 .btn--explore {
@@ -56,28 +52,28 @@ input[type=checkbox]:checked + label .far {
   transition: all 1.5s ease-out;
 }
 
-.btn--Navli {
-  list-style-type: none;
-  font-size: 16px;
-  font-weight: 500;
+.btn--home-li {
   margin: auto;
   border: none;
+  font-size: 17px;
+  box-shadow: 0px 3px 10px rgba(53, 53, 53, 0.25);
+  list-style-type: none;
+  font-weight: 500;
   border-radius: 20px;
   background-color: #f7f7f7;
   width: 70%;
   margin-bottom: 25px;
   padding: 25px;
   position: relative;
-  box-shadow: 0px 3px 10px rgba(128, 128, 128, 0.368627451);
 }
-.btn--Navli:hover {
+.btn--home-li:hover {
   background-color: #f3eafc;
-  cursor: pointer;
+  box-shadow: 0px 3px 10px rgba(53, 53, 53, 0.6);
 }
-.btn--Navli:hover i {
+.btn--home-li:hover i {
   color: #9356dc;
 }
-.btn--Navli a {
+.btn--home-li a {
   text-decoration: none;
   color: #010101;
   position: relative;
@@ -85,30 +81,30 @@ input[type=checkbox]:checked + label .far {
   align-items: center;
   justify-content: flex-start;
 }
-.btn--Navli a i {
+.btn--home-li a i {
   color: #808080;
 }
-.btn--Navli a .fa-store {
+.btn--home-li a .fa-store {
   margin: 0px 22px 0px 12px;
 }
-.btn--Navli a .fa-mobile-alt {
+.btn--home-li a .fa-mobile-alt {
   font-size: 20px;
   margin: 0px 25px 0px 14px;
 }
-.btn--Navli a .menu-ellipsisBars {
+.btn--home-li a .menu-ellipsisBars {
   display: flex;
   align-items: center;
   margin: 0px 20px 0px 10px;
   color: gray;
 }
-.btn--Navli a .menu-ellipsisBars .fa-ellipsis-v {
+.btn--home-li a .menu-ellipsisBars .fa-ellipsis-v {
   font-size: 15px;
 }
-.btn--Navli a .menu-ellipsisBars .fa-bars {
+.btn--home-li a .menu-ellipsisBars .fa-bars {
   font-size: 17px;
   padding-left: 2px;
 }
-.btn--Navli a .number {
+.btn--home-li a .number {
   height: 15px;
   width: 15px;
   font-size: 15px;
@@ -119,8 +115,8 @@ input[type=checkbox]:checked + label .far {
   position: absolute;
   left: -40px;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
 
 @media screen and (min-width: 768px) {
@@ -143,26 +139,26 @@ input[type=checkbox]:checked + label .far {
   inset: 0;
   z-index: 1;
   opacity: 0.95;
-  -webkit-animation: disappear 1s 2s linear forwards;
-          animation: disappear 1s 2s linear forwards;
+  -webkit-animation: disappear 0.5s 2s linear forwards;
+          animation: disappear 0.5s 2s linear forwards;
   transform-origin: top;
 }
 
 @-webkit-keyframes disappear {
   from {
-    transform: scaleY(1);
+    transform: scale(1);
   }
   to {
-    transform: scaleY(0);
+    transform: scale(0);
   }
 }
 
 @keyframes disappear {
   from {
-    transform: scaleY(1);
+    transform: scale(1);
   }
   to {
-    transform: scaleY(0);
+    transform: scale(0);
   }
 }
 .loader {
@@ -281,24 +277,27 @@ input[type=checkbox]:checked + label .far {
     box-shadow: 0.2em -0.2em 0 0 currentcolor;
   }
 }
-#main_wrapper__menu section {
-  transform: translateY(-30px);
+.menu-lst div {
+  -webkit-animation: menu-slide 1s;
+          animation: menu-slide 1s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
 }
-#main_wrapper__menu section:nth-child(1) {
-  -webkit-animation: menu-slide 0.8s 0.2s ease-out forwards;
-          animation: menu-slide 0.8s 0.2s ease-out forwards;
+.menu-lst div:nth-child(1) {
+  -webkit-animation-delay: 200ms;
+          animation-delay: 200ms;
 }
-#main_wrapper__menu section:nth-child(2) {
-  -webkit-animation: menu-slide 0.8s 0.4s ease-out forwards;
-          animation: menu-slide 0.8s 0.4s ease-out forwards;
+.menu-lst div:nth-child(2) {
+  -webkit-animation-delay: 400ms;
+          animation-delay: 400ms;
 }
-#main_wrapper__menu section:nth-child(3) {
-  -webkit-animation: menu-slide 0.8s 0.6s ease-out forwards;
-          animation: menu-slide 0.8s 0.6s ease-out forwards;
+.menu-lst div:nth-child(3) {
+  -webkit-animation-delay: 600ms;
+          animation-delay: 600ms;
 }
-#main_wrapper__menu section:nth-child(4) {
-  -webkit-animation: menu-slide 0.8s 0.8s ease-out forwards;
-          animation: menu-slide 0.8s 0.8s ease-out forwards;
+.menu-lst div:nth-child(4) {
+  -webkit-animation-delay: 800ms;
+          animation-delay: 800ms;
 }
 @-webkit-keyframes menu-slide {
   from {
@@ -328,10 +327,12 @@ input[type=checkbox]:checked + label .far {
   font: 19px "Shrikhand";
 }
 #mainFooter ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
   padding-left: 5%;
 }
 #mainFooter ul li {
-  list-style-type: none;
   font-size: 15px;
   margin-bottom: 10px;
 }
@@ -344,6 +345,8 @@ input[type=checkbox]:checked + label .far {
   padding-right: 13px;
 }
 #mainFooter ul li a {
+  padding: 0;
+  margin: 0;
   text-decoration: none;
   color: #ffffff;
 }
@@ -355,13 +358,13 @@ input[type=checkbox]:checked + label .far {
   background-color: #f7f7f7;
   padding-bottom: 40px;
   display: flex;
-  flex-direction: column;
   align-items: center;
+  flex-direction: column;
 }
 #mainHeader .explore #logo {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   padding: 20px 0px 12px;
   width: 100%;
   background: #ffffff;
@@ -371,7 +374,6 @@ input[type=checkbox]:checked + label .far {
 }
 #mainHeader .explore .explore--mapBar {
   display: flex;
-  flex-direction: column;
   align-items: center;
   flex-direction: row;
   justify-content: center;
@@ -403,48 +405,50 @@ input[type=checkbox]:checked + label .far {
   font-weight: 200;
   margin: 15px;
 }
-#mainHeader nav {
+#mainHeader #operation {
   margin-top: 50px;
   margin-bottom: 60px;
 }
-#mainHeader nav h3 {
+#mainHeader #operation h3 {
   font-size: 23px;
   margin: 30px 20px;
 }
-#mainHeader nav ul {
-  padding: 0%;
+#mainHeader #operation ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
   flex-wrap: wrap;
 }
 @media screen and (min-width: 768px) {
-  #mainHeader nav {
+  #mainHeader #operation {
     padding: 0px 50px;
   }
-  #mainHeader nav #mainNav--li {
+  #mainHeader #operation #operation--lst {
     display: flex;
     justify-content: space-evenly;
   }
-  #mainHeader nav #mainNav--li li {
+  #mainHeader #operation #operation--lst li {
     width: 320px;
     padding: 22px;
     margin: 0px 10px 30px;
   }
-  #mainHeader nav #mainNav--li li a {
-    font-size: font-size("md");
+  #mainHeader #operation #operation--lst li a {
+    font-size: 1rem;
     justify-content: center;
   }
-  #mainHeader nav #mainNav--li li a .fa-mobile-alt {
+  #mainHeader #operation #operation--lst li a .fa-mobile-alt {
     font-size: 17px;
   }
-  #mainHeader nav #mainNav--li li a .menu-ellipsisBars {
+  #mainHeader #operation #operation--lst li a .menu-ellipsisBars {
     color: gray;
   }
-  #mainHeader nav #mainNav--li li a .menu-ellipsisBars .fa-ellipsis-v {
+  #mainHeader #operation #operation--lst li a .menu-ellipsisBars .fa-ellipsis-v {
     font-size: 13px;
   }
-  #mainHeader nav #mainNav--li li a .menu-ellipsisBars .fa-bars {
+  #mainHeader #operation #operation--lst li a .menu-ellipsisBars .fa-bars {
     font-size: 15px;
   }
-  #mainHeader nav #mainNav--li li a .number {
+  #mainHeader #operation #operation--lst li a .number {
     height: 18px;
     width: 18px;
     font-size: 16px;
@@ -531,6 +535,9 @@ body #center_container article a p {
     margin-bottom: 30px;
     box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.3);
   }
+  #center_container #list_restaurants article:hover {
+    box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.5);
+  }
   #center_container #list_restaurants article img {
     height: 230px;
   }
@@ -564,8 +571,8 @@ body #center_container article a p {
 #main_wrapper__menu .center_container__menu {
   position: absolute;
   display: flex;
+  align-items: center;
   flex-direction: column;
-  align-content: center;
   background-color: #f7f7f7;
   top: 280px;
   width: 100%;
@@ -649,8 +656,8 @@ body #center_container article a p {
 }
 #main_wrapper__menu .center_container__menu section label .label__rightBloc {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   width: 0;
   background-color: #99e2d0;
   border-radius: 0px 15px 15px 0px;

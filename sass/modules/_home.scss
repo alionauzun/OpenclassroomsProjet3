@@ -42,7 +42,7 @@ article{
                 position: absolute;
                 right: 20px;
                 top: 20px;
-                background-color: color("middle-blue-green");
+                background-color: color("tertiary");
                 color:color("now_menu");
                 padding: 6px 14px;
                 border-radius: 3px;
@@ -79,6 +79,9 @@ article{
             margin: 10px;
             margin-bottom: 30px;
             box-shadow: 0px 3px 20px rgb(0 0 0 / 30%);
+            &:hover{
+                box-shadow: 0px 3px 20px rgb(0 0 0 / 50%);
+            }
             img{
                 height: 230px;
             }

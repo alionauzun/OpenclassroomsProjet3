@@ -1,26 +1,17 @@
 .btn {
-    margin: auto;
-    border: none;
+    @include base-btn;
     color: color("white");
-    font-size: 17px;
     background: color("color-buttons");
     padding: 15px;
     border-radius: 38px;
-    box-shadow: $default-box-shadow;
     transition: 0.5s;
-    opacity: 1;
     cursor: pointer;
 
-    &:hover{   
-        /*background-color: scale-color($value, $alpha: -20%);
-
-        box-shadow: scale-color($default-box-shadow, $alpha: +80%);*/
-        opacity: 0.8;
-        background: alpha(opacity=0.8);
-
+    &:hover{ 
+        background: linear-gradient(-6deg, #9357dceb, #ff79d9e7);  
+        box-shadow: (0px 3px 10px rgb(53 53 53 / 60%));
     }
 }
-
 
 .btn--explore{
     @extend .btn;
@@ -31,10 +22,10 @@
     @extend .btn;
     padding: 15px 55px;
     margin-bottom:  60px;
-    
     }
+
 .btn--heart .far{
-    color: #808080; 
+    color: color("gray"); 
     border: none;
     background: none;
     font-size: 25px;
@@ -58,32 +49,28 @@ input[type=checkbox]{
 }
 }
 
-.btn--Navli{
+.btn--home-li{
+        @include base-btn;
         list-style-type: none;
-        font-size: 16px;
         font-weight: 500;
-        margin: auto;
-        border: none;
         border-radius: 20px;
         background-color: color("gray-light");
         width: 70%;
         margin-bottom: 25px;
         padding: 25px;
         position: relative;
-        box-shadow: 0px 3px 10px #8080805e;
         &:hover {
             background-color: #f3eafc;
-            cursor: pointer;
+            box-shadow: (0px 3px 10px rgb(53 53 53 / 60%));
         }
         &:hover i{
-            color: color("amethyst"); 
+            color: color("primary"); 
             } 
         a{
             text-decoration: none;
             color: color("black");
             position: relative;
-            display: flex;
-            align-items: center;
+            @include display-flex();
             justify-content: flex-start;
             i{
                 color: color("gray");
@@ -96,8 +83,7 @@ input[type=checkbox]{
                 margin: 0px 25px 0px 14px;
             }
             .menu-ellipsisBars{
-                display: flex;
-                align-items: center;
+                @include display-flex();
                 margin: 0px 20px 0px 10px;
                 color: gray;
                 .fa-ellipsis-v{
@@ -114,13 +100,12 @@ input[type=checkbox]{
                 font-size: 15px;
                 padding: 5px;
                 border-radius: 50%;
-                background-color: color("amethyst");
+                background-color: color("primary");
                 color: color("white");
                 position: absolute;
                 left: -40px;
-                display: flex;
+                @include display-flex();
                 justify-content: center;
-                align-items: center;
                 }
             }
         } 

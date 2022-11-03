@@ -25,16 +25,14 @@
     
     .center_container__menu{
         position: absolute;
-        display: flex;
+        @include display-flex();
         flex-direction: column;
-        align-content: center;
         background-color: color("gray-light");
         top: 280px;
         width: 100%;
         border-radius: 40px 40px 0px 0px;
         .center_container__header{
-            display: flex;
-            align-items: center;
+            @include display-flex();
             justify-content: space-between;
             margin: 15px 30px 25px 20px;
             h1{
@@ -53,7 +51,7 @@
         hr{
             width: 10%;
             margin: 0 0 15px;
-            background-color: #99e2d0;
+            background-color: color("tertiary");
             height: 3px;
             border: none;
         }
@@ -110,11 +108,10 @@
             }
             
             .label__rightBloc{
-            display: flex;
+            @include display-flex();
             justify-content: center;
-            align-items: center;
             width: 0;
-            background-color: color("middle-blue-green");
+            background-color: color("tertiary");
             
             border-radius: 0px 15px 15px 0px;
             overflow: hidden;
@@ -124,7 +121,7 @@
                 padding: 6px;
                 border-radius: 50%;
                 font-size: 13px;  
-                color: color("middle-blue-green")
+                color: color("tertiary")
             }
             }
         }

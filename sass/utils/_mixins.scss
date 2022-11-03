@@ -1,11 +1,31 @@
 //Display-flex mixin
 @mixin display-flex{
     display: flex;
-    flex-direction: column;
     align-items: center;
 }
 
+@mixin display-grid{
+    display: grid;
+    place-items: center;  
+}
 
+@mixin reset($type: ""){
+    padding: 0;
+    margin: 0;
+    @if $type == "list"{
+        list-style-type: none;
+    }
+    @if $type == "link" {
+        text-decoration: none;
+    }
+}//end reset mixin
+
+@mixin base-btn{
+    margin: auto;
+    border: none;
+    font-size: 17px;
+    box-shadow: $default-box-shadow;
+}
 
 @mixin media-breakpoint-up($name){
     @media screen and (min-width : map-get($breakpoints, $name)) {

@@ -8,9 +8,9 @@
         font: 19px "Shrikhand" ;
     }
     ul{
+        @include reset('list');
         padding-left: 5%;
         li{
-            list-style-type: none;
             font-size: 15px;
             margin-bottom: 10px;
             #hands{
@@ -22,7 +22,7 @@
                 padding-right: 13px;
             }
             a{
-                text-decoration: none;
+                @include reset('link');
                 color: color("white");
             } 
         }
