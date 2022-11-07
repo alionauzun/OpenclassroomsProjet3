@@ -5,13 +5,13 @@
     background-color: color("footer-background");
     h3{
         padding-left: 5%;
-        font: 19px "Shrikhand" ;
+        font-family: "Shrikhand";
     }
     ul{
         @include reset('list');
         padding-left: 5%;
         li{
-            font-size: 15px;
+            font-size: 17px;
             margin-bottom: 10px;
             #hands{
                 font-size: 11px;

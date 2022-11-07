@@ -119,6 +119,25 @@ input[type=checkbox]:checked + label .far {
   justify-content: center;
 }
 
+.text h1 {
+  font-size: 1.76rem;
+}
+.text h2 {
+  font-size: 1.54rem;
+}
+.text h3 {
+  font-size: 1.21rem;
+}
+.text h4 {
+  font-size: 1.1rem;
+}
+.text h5 {
+  font-size: 0.99rem;
+}
+.text h6 {
+  font-size: 0.88rem;
+}
+
 @media screen and (min-width: 768px) {
   input:hover + label .far {
     font-weight: 900;
@@ -135,30 +154,41 @@ input[type=checkbox]:checked + label .far {
   place-items: center;
   background-color: #f7f7f7;
   height: 100vh;
-  border-radius: 20px;
   inset: 0;
   z-index: 1;
   opacity: 0.95;
-  -webkit-animation: disappear 0.5s 2s linear forwards;
-          animation: disappear 0.5s 2s linear forwards;
+  -webkit-animation: disappear 1s 2s ease-in forwards;
+          animation: disappear 1s 2s ease-in forwards;
   transform-origin: top;
 }
 
 @-webkit-keyframes disappear {
-  from {
-    transform: scale(1);
+  0% {
+    transform: translateY(1);
+    opacity: 50%;
   }
-  to {
-    transform: scale(0);
+  50% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scaleY(0);
+    opacity: 0;
   }
 }
 
 @keyframes disappear {
-  from {
-    transform: scale(1);
+  0% {
+    transform: translateY(1);
+    opacity: 50%;
   }
-  to {
-    transform: scale(0);
+  50% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scaleY(0);
+    opacity: 0;
   }
 }
 .loader {
@@ -277,42 +307,46 @@ input[type=checkbox]:checked + label .far {
     box-shadow: 0.2em -0.2em 0 0 currentcolor;
   }
 }
-.menu-lst div {
+.menu-lst .menu {
   -webkit-animation: menu-slide 1s;
           animation: menu-slide 1s;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
 }
-.menu-lst div:nth-child(1) {
+.menu-lst .menu:nth-child(1) {
   -webkit-animation-delay: 200ms;
           animation-delay: 200ms;
 }
-.menu-lst div:nth-child(2) {
+.menu-lst .menu:nth-child(2) {
   -webkit-animation-delay: 400ms;
           animation-delay: 400ms;
 }
-.menu-lst div:nth-child(3) {
+.menu-lst .menu:nth-child(3) {
   -webkit-animation-delay: 600ms;
           animation-delay: 600ms;
 }
-.menu-lst div:nth-child(4) {
+.menu-lst .menu:nth-child(4) {
   -webkit-animation-delay: 800ms;
           animation-delay: 800ms;
 }
 @-webkit-keyframes menu-slide {
   from {
-    transform: scale(0);
+    transform: translateY(50%);
+    opacity: 0;
   }
   to {
-    transform: scale(1);
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 @keyframes menu-slide {
   from {
-    transform: scale(0);
+    transform: translateY(50%);
+    opacity: 0;
   }
   to {
-    transform: scale(1);
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
@@ -324,7 +358,7 @@ input[type=checkbox]:checked + label .far {
 }
 #mainFooter h3 {
   padding-left: 5%;
-  font: 19px "Shrikhand";
+  font-family: "Shrikhand";
 }
 #mainFooter ul {
   padding: 0;
@@ -333,7 +367,7 @@ input[type=checkbox]:checked + label .far {
   padding-left: 5%;
 }
 #mainFooter ul li {
-  font-size: 15px;
+  font-size: 17px;
   margin-bottom: 10px;
 }
 #mainFooter ul li #hands {
@@ -394,14 +428,13 @@ input[type=checkbox]:checked + label .far {
 }
 #mainHeader .explore h2 {
   text-align: center;
-  font-size: 24px;
   padding: 20px 46px 0px;
   margin-bottom: 0px;
 }
 #mainHeader .explore p {
   color: #808080;
   text-align: center;
-  font-size: 18px;
+  font-size: 1.1rem;
   font-weight: 200;
   margin: 15px;
 }
@@ -409,8 +442,7 @@ input[type=checkbox]:checked + label .far {
   margin-top: 50px;
   margin-bottom: 60px;
 }
-#mainHeader #operation h3 {
-  font-size: 23px;
+#mainHeader #operation h2 {
   margin: 30px 20px;
 }
 #mainHeader #operation ul {
@@ -433,7 +465,7 @@ input[type=checkbox]:checked + label .far {
     margin: 0px 10px 30px;
   }
   #mainHeader #operation #operation--lst li a {
-    font-size: 1rem;
+    font-size: 1.1rem;
     justify-content: center;
   }
   #mainHeader #operation #operation--lst li a .fa-mobile-alt {
@@ -471,8 +503,7 @@ body #center_container {
   padding-bottom: 50px;
   background-color: #f7f7f7;
 }
-body #center_container h3 {
-  font-size: 23px;
+body #center_container h2 {
   margin: 25px 20px;
 }
 body #center_container article {
@@ -510,7 +541,6 @@ body #center_container article a .now_menu {
   font-size: 15px;
 }
 body #center_container article a h4 {
-  font-size: 18px;
   margin: 10px 15px 0px;
 }
 body #center_container article a p {
@@ -520,6 +550,9 @@ body #center_container article a p {
 }
 
 @media screen and (min-width: 768px) {
+  #center_container {
+    padding: 30px 50px 50px;
+  }
   #center_container h3 {
     padding-bottom: 40px;
   }
@@ -537,6 +570,7 @@ body #center_container article a p {
   }
   #center_container #list_restaurants article:hover {
     box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.5);
+    width: 571px;
   }
   #center_container #list_restaurants article img {
     height: 230px;
@@ -581,25 +615,25 @@ body #center_container article a p {
 #main_wrapper__menu .center_container__menu .center_container__header {
   display: flex;
   align-items: center;
+  margin: 15px 0px 25px;
+  width: 85%;
   justify-content: space-between;
-  margin: 15px 30px 25px 20px;
 }
 #main_wrapper__menu .center_container__menu .center_container__header h1 {
-  font: 28px "Shrikhand";
+  font-family: "Shrikhand";
 }
 #main_wrapper__menu .center_container__menu section {
   display: inline-block;
-  margin: 0 15px;
+  width: 93%;
   padding-bottom: 20px;
 }
-#main_wrapper__menu .center_container__menu section h2 {
-  font: 17px roboto;
+#main_wrapper__menu .center_container__menu section h4 {
   font-weight: 200;
-  margin: 15px 0px 5px;
+  margin: 15px 6px 5px;
 }
 #main_wrapper__menu .center_container__menu section hr {
   width: 10%;
-  margin: 0 0 15px;
+  margin: 0 6px 15px;
   background-color: #99e2d0;
   height: 3px;
   border: none;
@@ -631,7 +665,7 @@ body #center_container article a p {
 }
 #main_wrapper__menu .center_container__menu section label .label__leftBloc h4 {
   margin: 0;
-  font-size: 18px;
+  font-weight: bold;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -644,7 +678,8 @@ body #center_container article a p {
 }
 #main_wrapper__menu .center_container__menu section label .label__leftBloc .prg-label__leftBloc p {
   margin: 0;
-  margin-right: 5px;
+  margin-right: 10px;
+  width: 88%;
   font: 16px roboto;
   font-weight: 200;
   white-space: nowrap;
@@ -694,7 +729,7 @@ body #center_container article a p {
     width: 635px;
   }
   #main_wrapper__menu .center_container__menu section hr {
-    width: 9%;
+    width: 6%;
   }
   #main_wrapper__menu .center_container__menu section input[type=checkbox] {
     display: none;

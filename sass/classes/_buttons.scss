@@ -109,6 +109,14 @@ input[type=checkbox]{
                 }
             }
         } 
+        
+.text{
+    @for $i from 1 through 6 {
+        h#{$i} {
+            font-size: map-get($heading-font-size, $i);
+        }
+    }
+}//end headings font size
 
 
 @include media-breakpoint-up("md"){
@@ -120,3 +128,4 @@ input[type=checkbox]{
         transition: all 0.5s ease-out;
     }
 }
+
