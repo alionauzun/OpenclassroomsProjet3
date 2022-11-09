@@ -51,6 +51,8 @@ input[type=checkbox]{
 
 .btn--home-li{
         @include base-btn;
+        @include display-flex();
+        justify-content: flex-start;
         list-style-type: none;
         font-weight: 500;
         border-radius: 20px;
@@ -59,6 +61,7 @@ input[type=checkbox]{
         margin-bottom: 25px;
         padding: 25px;
         position: relative;
+        cursor: pointer;
         &:hover {
             background-color: #f3eafc;
             box-shadow: (0px 3px 10px rgb(53 53 53 / 60%));
@@ -66,12 +69,6 @@ input[type=checkbox]{
         &:hover i{
             color: color("primary"); 
             } 
-        a{
-            text-decoration: none;
-            color: color("black");
-            position: relative;
-            @include display-flex();
-            justify-content: flex-start;
             i{
                 color: color("gray");
             }
@@ -103,11 +100,11 @@ input[type=checkbox]{
                 background-color: color("primary");
                 color: color("white");
                 position: absolute;
-                left: -40px;
+                left: -15px;
                 @include display-flex();
                 justify-content: center;
                 }
-            }
+            
         } 
         
 .text{
