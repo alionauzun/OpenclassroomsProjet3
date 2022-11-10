@@ -1,5 +1,24 @@
 @import url("https://necolas.github.io/normalize.css/8.0.1/normalize.css");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@200;300;400;500&family=Shrikhand&display=swap");
+.text h1 {
+  font-size: 1.76rem;
+}
+.text h2 {
+  font-size: 1.54rem;
+}
+.text h3 {
+  font-size: 1.21rem;
+}
+.text h4 {
+  font-size: 1.1rem;
+}
+.text h5 {
+  font-size: 0.99rem;
+}
+.text h6 {
+  font-size: 0.88rem;
+}
+
 .btn, .btn--comander, .btn--explore {
   margin: auto;
   border: none;
@@ -113,25 +132,6 @@ input[type=checkbox]:checked + label .far {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.text h1 {
-  font-size: 1.76rem;
-}
-.text h2 {
-  font-size: 1.54rem;
-}
-.text h3 {
-  font-size: 1.21rem;
-}
-.text h4 {
-  font-size: 1.1rem;
-}
-.text h5 {
-  font-size: 0.99rem;
-}
-.text h6 {
-  font-size: 0.88rem;
 }
 
 @media screen and (min-width: 768px) {

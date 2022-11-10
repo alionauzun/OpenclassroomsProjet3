@@ -1,3 +1,11 @@
+.text{
+    @for $i from 1 through 6 {
+        h#{$i} {
+            font-size: map-get($heading-font-size, $i);
+        }
+    }
+}//end headings font size
+
 .btn {
     @include base-btn;
     color: color("white");
@@ -106,14 +114,6 @@ input[type=checkbox]{
                 }
             
         } 
-        
-.text{
-    @for $i from 1 through 6 {
-        h#{$i} {
-            font-size: map-get($heading-font-size, $i);
-        }
-    }
-}//end headings font size
 
 
 @include media-breakpoint-up("md"){
