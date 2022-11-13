@@ -1,218 +1,184 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="utf-8" />
-    <title>ohmyfood réservez le menu qui vous convient</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="css/styles.css" />
-    <script
-      src="https://kit.fontawesome.com/b7100e3b4a.js"
-      crossorigin="anonymous">
-    </script>
-  </head>
 
-  <body>
-    <div id="main_wrapper__menu" class="text">
-      <header id="mainHeader">
-        <div id="logo">
-          <a href="index.html">
-            <i class="fas fa-arrow-left"></i>
-          </a>
-          <img
-            src="images/logo/ohmyfood@2x.svg"
-            alt="Logo ohmyfood"
-            id="logoImg"
-          />
-        </div>
-        <img
-          src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
-          alt="image le delice des sens"
-          class="mainHeader__imag"
-        />
-      </header>
+<head>
+  <meta charset="utf-8" />
+  <title>ohmyfood réservez le menu qui vous convient</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <script src="https://kit.fontawesome.com/b7100e3b4a.js" crossorigin="anonymous">
+  </script>
+</head>
 
-      <div class="center_container__menu">
-        <div class="center_container__header">
-          <h1>Le délice des sens</h1>
-          <input type="checkbox" id="heartDelice">
-          <label for="heartDelice" class="btn--heart">
-            <i class="far fa-heart"></i>
-          </label>
-        </div>
+<body>
+  <div id="main_wrapper-menu" class="text">
+    <header id="mainHeader">
+      <div id="logo">
+        <a href="index.html">
+          <i class="fas fa-arrow-left"></i>
+        </a>
+        <img src="images/logo/ohmyfood@2x.svg" alt="Logo ohmyfood" id="logoImg" />
+      </div>
+      <img src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="image le delice des sens"
+        class="mainHeader__imag" />
+    </header>
 
-        <section class="center_container_entre">
-          <h4>ENTRÉES</h4>
-          <hr>
-          <div class="menu-lst">
-            <div class="menu">
-              <input type="checkbox" id="tartareThon" />
-              <label for="tartareThon">
-              <div class="label__leftBloc">
+    <div class="container_menu">
+      <div class="container_menu__header">
+        <h1>Le délice des sens</h1>
+        <input type="checkbox" id="heartDelice">
+        <label for="heartDelice" class="btn--heart">
+          <i class="far fa-heart"></i>
+        </label>
+      </div>
+
+      <section class="container_menu__entre">
+        <h4>ENTRÉES</h4>
+        <hr>
+        <div class="menu">
+          <div class="menu__item">
+              <div class="menu__item__leftBloc">
                 <h4>Tartare de thon</h4>
-                <div class="prg-label__leftBloc">
+                <div class="item-prg">
                   <p>Assaisonné au yuzu</p><span>25€</span>
                 </div>
               </div>
-              <div class="label__rightBloc">
-                  <i class="fas fa-check"></i>
+              <div class="menu__item__rightBloc">
+                <i class="fas fa-check"></i>
               </div>
-              </label>
-            </div>
+          </div>
 
-            <div class="menu">
-              <input type="checkbox" id="boucheeHomard" />
-              <label for="boucheeHomard">
-              <div class="label__leftBloc">
+          <div class="menu__item">
+              <div class="menu__item__leftBloc">
                 <h4>Bouchée de homard croustillant</h4>
-                <div class="prg-label__leftBloc">
-                    <p>Et sa farandole de petits légumes</p> <span>35€</span>
-                </div> 
-              </div>
-              <div class="label__rightBloc">
-                  <i class="fas fa-check"></i>
-              </div>
-              </label>
-            </div>
-
-            <div class="menu">
-              <input type="checkbox" id="velouteCepes" />
-              <label for="velouteCepes">
-              <div class="label__leftBloc">
-                <h4>Velouté de cèpes</h4>
-                <div class="prg-label__leftBloc">
-                    <p>Aux truffes</p><span>20€</span>
+                <div class="item-prg">
+                  <p>Et sa farandole de petits légumes</p> <span>35€</span>
                 </div>
               </div>
-              <div class="label__rightBloc">
+              <div class="menu__item__rightBloc">
                 <i class="fas fa-check"></i>
               </div>
-              </label>
-            </div>
           </div>
-        </section>
 
-        <section class="center_container_plats">
-          <h4>PLATS</h4>
-          <hr>
-          <div class="menu-lst">
-            <div class="menu">
-              <input type="checkbox" id="pouletRôti" />
-              <label for="pouletRôti">
-            <div class="label__leftBloc">
-              <h4>Poulet rôti aux herbes de Provence</h4>
-              <div class="prg-label__leftBloc">
+          <div class="menu__item">
+              <div class="menu__item__leftBloc">
+                <h4>Velouté de cèpes</h4>
+                <div class="item-prg">
+                  <p>Aux truffes</p><span>20€</span>
+                </div>
+              </div>
+              <div class="menu__item__rightBloc">
+                <i class="fas fa-check"></i>
+              </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="container_menu__plats">
+        <h4>PLATS</h4>
+        <hr>
+        <div class="menu">
+          <div class="menu__item">
+              <div class="menu__item__leftBloc">
+                <h4>Poulet rôti aux herbes de Provence</h4>
+                <div class="item-prg">
                   <p>Et sa crème de truffe</p><span>40€</span>
+                </div>
               </div>
-            </div>
-            <div class="label__rightBloc">
+              <div class="menu__item__rightBloc">
                 <i class="fas fa-check"></i>
-            </div>
-              </label>
-            </div>
-
-            <div class="menu">
-              <input type="checkbox" id="langousteRôtie" />
-              <label for="langousteRôtie">
-            <div class="label__leftBloc">
-              <h4>Langouste rôtie</h4>
-              <div class="prg-label__leftBloc">
-                  <p>Langouste rôtie Et ses légumes de saison</p><span>35€</span>
               </div>
-            </div>
-            <div class="label__rightBloc">
-            <i class="fas fa-check"></i>
-            </div>
-              </label>
-            </div>
-
-            <div class="menu">
-              <input type="checkbox" id="coteBoeuf" />
-              <label for="coteBoeuf">
-              <div class="label__leftBloc">
-                <h4>Côte de boeuf Angus</h4>
-                <div class="prg-label__leftBloc">
-                    <p>Et sa purée de panais</p> <span>44€</span>
-                </div>  
-              </div>
-              <div class="label__rightBloc">
-                  <i class="fas fa-check"></i>          
-              </div>
-              </label>
-            </div>
           </div>
-        </section>
 
-        <section class="center_container_desserts">
-          <h4>DESSERTS</h4>
-          <hr>
-          <div class="menu-lst">
+          <div class="menu__item">
+              <div class="menu__item__leftBloc">
+                <h4>Langouste rôtie</h4>
+                <div class="item-prg">
+                  <p>Langouste rôtie Et ses légumes de saison</p><span>35€</span>
+                </div>
+              </div>
+              <div class="menu__item__rightBloc">
+                <i class="fas fa-check"></i>
+              </div>
+          </div>
 
-            <div class="menu">
-                <input type="checkbox" id="farandoleDesserts" />
-                <label for="farandoleDesserts">
-              <div class="label__leftBloc">
-                  <h4>Farandole de desserts</h4>
-                  <div class="prg-label__leftBloc">
-                      <p>Du chef</p><span>18€</span>
-                  </div>
+          <div class="menu__item">
+              <div class="menu__item__leftBloc">
+                <h4>Côte de boeuf Angus</h4>
+                <div class="item-prg">
+                  <p>Et sa purée de panais</p> <span>44€</span>
+                </div>
               </div>
-              <div class="label__rightBloc">  
-                  <i class="fas fa-check"></i>
+              <div class="menu__item__rightBloc">
+                <i class="fas fa-check"></i>
               </div>
-                </label>
-            </div>
+          </div>
+        </div>
+      </section>
 
-            <div class="menu">
-                <input type="checkbox" id="cremeBrulee" />
-                <label for="cremeBrulee">
-              <div class="label__leftBloc">
-                  <h4>Crème brulée</h4>
-                  <div class="prg-label__leftBloc">
-                      <p>Revisitée</p><span>22€</span>
-                  </div>
-              </div>
-              <div class="label__rightBloc"> 
-                  <i class="fas fa-check"></i>
-              </div>
-                </label>
-            </div>
+      <section class="container_menu__desserts">
+        <h4>DESSERTS</h4>
+        <hr>
+        <div class="menu">
 
-            <div class="menu">
-                <input type="checkbox" id="tiramisu"/>
-                <label for="tiramisu">  
-              <div class="label__leftBloc">
-                  <h4>Tiramisu</h4>
-                  <div class="prg-label__leftBloc">
-                      <p>À la noisette</p><span>23€</span>
-                  </div>
+          <div class="menu__item">
+              <div class="menu__item__leftBloc">
+                <h4>Farandole de desserts</h4>
+                <div class="item-prg">
+                  <p>Du chef</p><span>18€</span>
+                </div>
               </div>
-              <div class="label__rightBloc">  
-              <i class="fas fa-check"></i> 
+              <div class="menu__item__rightBloc">
+                <i class="fas fa-check"></i>
               </div>
-                </label>
-            </div>
-        </div>  
-        </section>
+          </div>
 
-        <button type="button" class="btn--comander">Comander</button>
+          <div class="menu__item">
+              <div class="menu__item__leftBloc">
+                <h4>Crème brulée</h4>
+                <div class="item-prg">
+                  <p>Revisitée</p><span>22€</span>
+                </div>
+              </div>
+              <div class="menu__item__rightBloc">
+                <i class="fas fa-check"></i>
+              </div>
+          </div>
 
-        <footer id="mainFooter">
-          <h3>ohmyfood</h3>
-          <ul>
-            <li>
-              <i class="fas fa-utensils" id="utensils"></i>
-              <a href="#">Proposer un restaurant</a>
-            </li>
-            <li>
-              <i class="fas fa-hands-helping" id="hands"></i>
-              <a href="#">Devenir partenaire</a>
-            </li>
-            <li><a href="#">Mentions légales</a></li>
-            <li><a href="mailto:noreply@gmail.com">Contact</a></li>
-          </ul>
-        </footer>
-        <!--Ici se termine le #mainFooter-->
-      </div>
+          <div class="menu__item">
+              <div class="menu__item__leftBloc">
+                <h4>Tiramisu</h4>
+                <div class="item-prg">
+                  <p>À la noisette</p><span>23€</span>
+                </div>
+              </div>
+              <div class="menu__item__rightBloc">
+                <i class="fas fa-check"></i>
+              </div>
+          </div>
+        </div>
+      </section>
+
+      <button type="button" class="btn--comander">Comander</button>
+
+      <footer id="mainFooter">
+        <h3>ohmyfood</h3>
+        <ul>
+          <li>
+            <i class="fas fa-utensils" id="utensils"></i>
+            <a href="#">Proposer un restaurant</a>
+          </li>
+          <li>
+            <i class="fas fa-hands-helping" id="hands"></i>
+            <a href="#">Devenir partenaire</a>
+          </li>
+          <li><a href="#">Mentions légales</a></li>
+          <li><a href="mailto:noreply@gmail.com">Contact</a></li>
+        </ul>
+      </footer>
+      <!--Ici se termine le #mainFooter-->
     </div>
-  </body>
+  </div>
+</body>
+
 </html>
