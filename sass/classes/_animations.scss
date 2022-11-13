@@ -92,7 +92,7 @@
 }
 
 //animation page menu
-.menu-lst .menu {
+.menu__item {
   @for $i from 1 through 4 {
     &:nth-child(#{$i}) {
       animation-delay: 200ms * $i;
@@ -110,5 +110,14 @@
       opacity: 1;
       transform: translateY(0);
     }
+  }
+}
+
+@keyframes quarter-spin {
+  0%{
+    transform: rotate(-270deg);
+  }
+  100%{
+    transform: rotate(0);
   }
 }
